@@ -1,0 +1,294 @@
+<html>
+    <style>
+        .h1{
+            text-align: center;
+            font-size: 70;
+        }
+        .p{
+            text-align: center;
+            font-size: 20;
+        }
+     .form{
+         height: 550;
+         width: 450;
+         margin-top: 90;
+         margin-left: 520;
+        background-color: lightgrey;
+     }
+     .divmain{
+         margin-top: 30;
+     }
+     .divgender{
+        font-size: 25px;
+        margin-top:-50px;
+        position: relative;
+     }
+
+     .genderlabel{
+        font-size: 25px;
+        margin-left: 13px;
+        margin-top: 20px;
+     }
+     .gendertext{
+         height: 30;
+         width: 180;
+         margin-left:13px;
+         border: 2px solid white;
+         border-radius: 4px;
+     }
+
+    .agelabel{
+        margin-left: 220px;
+        margin-top: 15px;
+        position: relative;
+       
+    }
+    .agetext{
+        height: 30;
+        width: 200;
+        border: 2px solid white;
+         border-radius: 4px;
+    }
+    .divage{
+        font-size: 25px;
+        margin-left: 200;
+        margin-top:-60px;
+        position: relative;
+    }
+    .divweight{
+        font-size: 25px;
+        margin-left: 50;
+        margin-top:25px;
+        position: relative;
+    }
+    .weightlabel{
+        margin-left: -35;
+       
+    }
+
+    .weighttext{
+        margin-left: -35;
+        height: 30;
+        width: 385;
+        border: 2px solid white;
+         border-radius: 4px;
+    }
+    .heightlabel{
+        margin-left: -30;
+        
+    }
+    .heighttext1{
+        height: 35;
+        width: 190;
+        margin-left: -35;
+        border: 2px solid white;
+         border-radius: 4px;
+    }
+    .heighttext2{
+        height: 35;
+        width: 190;
+        border: 2px solid white;
+         border-radius: 4px;
+    }
+    .divheight{
+        font-size: 25px;
+        margin-left: 50;
+        margin-top:25px;
+        position: relative;
+    }
+
+    .divactivity{
+        font-size: 25px;
+        margin-left: 50;
+        margin-top:25px;
+        position: relative;
+    }
+    .activitylabel{
+     margin-left: -30;
+    
+    }
+    .activitytext{
+        margin-left: -35;
+        height: 30;
+        width: 385;
+        border: 2px solid white;
+         border-radius: 4px;
+    }
+    .button{
+        margin-top: 50;
+        margin-left: 70;
+        position: relative;
+        height: 50;
+        width: 300;
+        background-color: #1E90FF;
+        color: white;
+        border: none;
+    }
+    .button:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        transition-duration: 0.4s;
+    }
+    .bttn{
+            border: none;
+            margin-top: 30;
+            height: 15px;
+            width:72;
+            border-bottom:solid 1px black;
+    }
+    .divresult{
+      margin-top: 20;
+    }
+    .resulttext{
+        border: 2px solid white;
+         border-radius: 4px;
+         margin-left: 170px;
+         height: 30px;
+         width: 250px;
+    }
+    .resultlabel{
+         margin-left: 50px;
+       margin-top: -50;
+    }
+    
+    </style>
+    <body>
+        <script>
+        
+          function Calculate(){
+              var val =document.getElementById('Gender').value;
+              var acti =document.getElementById('activity').value;
+              if(val=="female"&& acti=="sedentary"){
+                w=parseInt(document.getElementById('weight').value);
+              h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+              a=parseInt(document.getElementById('age').value);
+              document.getElementById('result').value= ((655 + (4.35*w ) + (4.7 *h ) - (4.7*a))*1.2).toFixed(2);
+                
+
+              } 
+              else if (val=="female"&& acti=="lightlyactive"){
+
+                w=parseInt(document.getElementById('weight').value);
+              h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+              a=parseInt(document.getElementById('age').value);
+              document.getElementById('result').value= ((655 + (4.35*w ) + (4.7 *h ) - (4.7*a))*1.375).toFixed(2);
+             }else if(val=="female"&& acti=="moderatelyactive"){
+
+            w=parseInt(document.getElementById('weight').value);
+            h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+            a=parseInt(document.getElementById('age').value);
+            document.getElementById('result').value= ((655 + (4.35*w ) + (4.7 *h ) - (4.7*a))*1.55).toFixed(2);
+             } 
+             else if (val=="female"&& acti=="veryactive"){
+            w=parseInt(document.getElementById('weight').value);
+            h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+            a=parseInt(document.getElementById('age').value);
+            document.getElementById('result').value= ((655 + (4.35*w ) + (4.7 *h ) - (4.7*a))*1.725).toFixed(2);
+             }
+             
+             else if(val=="female"&& acti=="extremelyactive"){
+            w=parseInt(document.getElementById('weight').value);
+            h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+            a=parseInt(document.getElementById('age').value);
+            document.getElementById('result').value= ((655 + (4.35*w ) + (4.7 *h ) - (4.7*a))*1.9).toFixed(2);
+            }
+
+else if(val=="male"&& acti=="sedentary"){
+w=parseInt(document.getElementById('weight').value);
+h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+a=parseInt(document.getElementById('age').value);
+document.getElementById('result').value= (( 066 + (6.23*w) + (12.7 * h ) - (6.8 * a))*1.2).toFixed(2);
+}
+
+else if (val=="male"&& acti=="lightlyactive"){
+w=parseInt(document.getElementById('weight').value);
+h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+a=parseInt(document.getElementById('age').value);
+document.getElementById('result').value= (( 066 + (6.23*w) + (12.7 * h ) - (6.8 * a))*1.375).toFixed(2);
+}
+
+else if(val=="male"&& acti=="moderatelyactive"){
+w=parseInt(document.getElementById('weight').value);
+h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+a=parseInt(document.getElementById('age').value);
+document.getElementById('result').value= (( 066 + (6.23*w) + (12.7 * h ) - (6.8 * a))*1.55).toFixed(2);
+} 
+
+else if (val=="male"&& acti=="veryactive"){
+w=parseInt(document.getElementById('weight').value);
+h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+a=parseInt(document.getElementById('age').value);
+document.getElementById('result').value= (( 066 + (6.23*w) + (12.7 * h ) - (6.8 * a))*1.725).toFixed(2);
+}
+
+else if(val=="male"&& acti=="extremelyactive"){
+w=parseInt(document.getElementById('weight').value);
+h=parseInt(document.getElementById('l3').value)*100+parseInt(document.getElementById('l4').value);
+a=parseInt(document.getElementById('age').value);
+document.getElementById('result').value= (( 066 + (6.23*w) + (12.7 * h ) - (6.8 * a))*1.9).toFixed(2);
+}
+              
+                
+          }
+             
+              
+              
+            
+            
+        </script>
+        <h1 class="h1">How Many Calories <br/> Should  You Eat Per Day <br/> to Lose Weight?</h1>
+        <p class="p">This is a simple but highly accurate scientific calorie calculator, along with 5<br/>
+                evidence-based tips on how to sustainably reduce calorie intake. Enter your<br/>
+                details in the calculator below to figure out how many calories you should be<br/>
+                eating per day to either maintain or lose weight.
+                </p>
+        <div>
+                <form class="form">
+                    <div class="divmain">
+                        <div class="divgender">
+                            <br>
+                                <label class="genderlabel" for="gender">Gender</label><br/>
+                                <select class="gendertext" name="Gender" id="Gender">
+                                    <option value="choose"><u>-Please choose gender-</u></option>
+                                    <option value="female" id="01"><u>Female</u></option>
+                                    <option value="male"><u>Male</u></option>
+                                </select>
+                        </div>
+                      
+                        <div class="divage">
+                            <label  for="age">Age</label><br/>
+                            <input class="agetext" placeholder="Age..." type="text" id="age" />
+                        </div>
+                        <div class="divweight">
+                            <label class="weightlabel" for="weight">Weight</label><br/>
+                            <input class="weighttext" type="text" id="weight" placeholder="Pounds..."/>
+                        </div>
+                        <div class="divheight">
+                            <label class="heightlabel" for="Height">Height</label><br/>
+                            <input class="heighttext1" type="text" id="l3" placeholder="Feet..."/>
+                            <input class="heighttext2" type="text" id="l4" placeholder="Inches..."/>
+
+                        </div>
+                        <div class="divactivity">
+                            <label class="activitylabel" for="Activity">Activity</label><br>
+                            <select class="activitytext" name="activity" id="activity">
+                                <option value="select">-Select from the dropdown-</option>
+                                <option value="sedentary">Sedentary</option>
+                                <option value="lightlyactive">Lightly active</option>
+                                <option value="moderatelyactive">Moderately active</option>
+                                <option value="veryactive">Very active</option>
+                                <option value="extremelyactive">Extremely active</option>
+                            </select>
+                        </div>
+                        <input class="button" type="button" onclick="Calculate();" value="Calculate"/><br><br>
+                         <div class="divresult">
+                                <label class="resultlabel" for="result">Result</label><br/>
+                                <input class="resulttext" type="text" id="result" placeholder="Your BMI is..."/>
+                         </div>
+                       
+                    </div>
+                      
+                </form>
+        </div>
+        <input class="bttn" type="Home Page" onClick="location.href='DietWebsite.html'" value="Home Page" />
+    </body>
+</html>

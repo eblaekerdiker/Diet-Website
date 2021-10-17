@@ -1,0 +1,138 @@
+<html>
+    <style>
+.h1{
+      font-family:"Trebuchet MS", Helvetica, sans-serif;
+      font-size: 100;
+       color: green;
+       text-align: center;
+    }
+    .h6{
+        margin-top: -30;
+        margin-left: 993;
+        color: green;
+    }
+
+    .pic{
+        margin-left: 15%;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        border: 0;
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    
+
+ul.menu{
+    background: linear-gradient(180deg, rgba(177,196,200,1) 0%);
+    height: 50px;
+}
+ul.menu >li{
+   float: left;
+}
+
+ul.menu >ul{
+    position: absolute;
+}
+
+ul.menu >li >a{
+     
+     display: block;
+     font-size: 18px;
+     color: grey;
+     padding: 25 40px;
+     margin-left: 180px;
+ }
+ 
+   ul.menu   ul li{
+     position: relative;
+     float: none;
+ }
+ 
+ ul.menu li ul{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms;
+ }
+ 
+
+
+ ul.menu li:hover >ul {
+ display: block;
+ opacity: 1;
+ visibility: visible;
+
+ }
+
+ ul.menu li ul li a:hover{
+     background-color: white
+     ;
+ }
+
+ ul.menu ul{
+     position: absolute;
+ }
+
+ ul.menu ul ul li{
+     float: none;
+     position: relative;
+     border-radius: 0px; 
+     padding: 0;
+     top: 100%;
+ } 
+
+ ul.menu ul  li a{
+    padding: 15px 40px;
+    background-color: white;
+ }
+ ul.menu ul ul li a:hover >ul {
+ background: #4b545f;
+ }
+
+ ul.menu ul ul{
+    position:absolute;
+    left: 50%;
+     top:-30;
+ }
+ 
+     
+ 
+    </style>
+
+    <body>
+        <div>
+                <h1 class="h1">EatingWell</h1>
+                <h6 class="h6">&reg;</h6>
+                <div>
+                <ul class="menu">
+                    <li ><a href="#">Healty Recipies</a>
+                    <ul class="menu">
+                        <li><a href="breakfastrecipies.html">Breakfast Recipies</a></li>
+                        <li><a href="lunchrecipies.html">Lunch Recipies</a></li>
+                        <li><a href="dinnerrecipies.html">Dinner Recipies</a></li>
+                        <li><a href="#">Appetizer Recipies</a>
+                        <ul  class="menu">
+                            <li><a href="sausageballs.html">Sausage Balls</a></li>
+                            <li><a href="onionrings.html">Onion Rings</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Dessert Recipies</a>
+                        <ul  class="menu">
+                            <li><a href="oatmealapplesaucecake.html">Oatmeal-Apple Sauce Cake</a></li>
+                            <li><a href="applepumpkinmuffins.html">Apple-Pumpkin Muffins</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="weightloss.html">Weight Loss</a></li>
+                    <li><a href="mealplans.html">Meal Plans</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+                </div>
+                <img class="pic" src="diet1.jpg" alt="women" width="1000" height="500">
+        </div>
+    </body>
+</html>
